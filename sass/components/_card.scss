@@ -27,16 +27,16 @@
 			&-1 {
 				background-image: linear-gradient(
 					to right bottom,
-					$color-secondary-light,
-					$color-secondary-dark
+					$color-primary-light,
+					$color-primary-dark
 				);
 			}
 
 			&-2 {
 				background-image: linear-gradient(
 					to right bottom,
-					$color-primary-light,
-					$color-primary-dark
+					$color-secondary-light,
+					$color-secondary-dark
 				);
 			}
 
@@ -70,16 +70,16 @@
 		border-top-right-radius: 3px;
 
 		&--1 {
+			background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+				url('../img/comp1.jpg');
+		}
+
+		&--2 {
 			background-image: linear-gradient(
 					to right bottom,
 					$color-secondary-light,
 					$color-secondary-dark
 				),
-				url('../img/comp1.jpg');
-		}
-
-		&--2 {
-			background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
 				url('../img/comp2.jpg');
 		}
 
@@ -113,16 +113,16 @@
 		&--1 {
 			background-image: linear-gradient(
 				to right bottom,
-				rgba($color-secondary-light, 0.95),
-				rgba($color-secondary-dark, 0.95)
+				rgba($color-primary-light, 0.95),
+				rgba($color-primary-dark, 0.95)
 			);
 		}
 
 		&--2 {
 			background-image: linear-gradient(
 				to right bottom,
-				rgba($color-primary-light, 0.95),
-				rgba($color-primary-dark, 0.95)
+				rgba($color-secondary-light, 0.95),
+				rgba($color-secondary-dark, 0.95)
 			);
 		}
 
@@ -164,22 +164,6 @@
 		text-align: center;
 	}
 
-	&__price-box {
-		text-align: center;
-		color: $color-white;
-		margin-bottom: 8rem;
-	}
-
-	&__price-only {
-		font-size: 1.4rem;
-		text-transform: uppercase;
-	}
-
-	&__price-value {
-		font-size: 6rem;
-		font-weight: 300;
-	}
-
 	// MEDIA QUERY
 
 	@media only screen and (max-width: 56.25em), only screen and (hover: none) {
@@ -216,14 +200,6 @@
 			transform: translate(0);
 			width: 100%;
 			padding: 7rem 4rem 4rem 4rem;
-		}
-
-		&__price-box {
-			margin-bottom: 3rem;
-		}
-
-		&__price-value {
-			font-size: 4rem;
 		}
 	}
 }
