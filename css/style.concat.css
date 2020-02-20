@@ -181,6 +181,18 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: #fff; }
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    .btn--white {
+      margin: 2rem; } }
+
+.btn--whiteDetails {
+  background-color: #fff;
+  color: #777; }
+  .btn--whiteDetails::after {
+    background-color: #fff; }
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    .btn--whiteDetails {
+      visibility: hidden; } }
 
 .btn--green {
   background-color: #26e600;
@@ -223,6 +235,10 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translateY(0px); }
+
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+  .btn-text {
+    visibility: hidden; } }
 
 .card {
   perspective: 150rem;
@@ -366,6 +382,9 @@ body {
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+  .popup__center {
+    width: 100%;
+    text-align: center; }
   .popup__img {
     display: block;
     width: 100%; }
