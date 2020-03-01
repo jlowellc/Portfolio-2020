@@ -22,14 +22,16 @@
 				</h1>
 			</div>
 		</header>
+
+		<!-- Main Section -->
 		<main>
 			<section class="section-about">
-				<div class="u-center-text u-margin-bottom-big">
+				<div class="u-center-text u-margin-bottom-big lax" data-lax-preset="blurIn fadeIn">
 					<h2 class="heading-secondary">
 						Things I know
 					</h2>
 				</div>
-				<div class="row">
+				<div class="row lax" data-lax-preset="blurIn fadeIn">
 					<div class="col-1-of-2">
 						<h3 class="heading-tertiary u-margin-bottom-small">
 							Software Fundamentals
@@ -67,13 +69,13 @@
 
 			<section class="section-pro">
 				<div class="u-center-text u-margin-bottom-big">
-					<h2 class="heading-secondary">
+					<h2 class="heading-secondary lax" data-lax-preset="blurIn fadeIn">
 						Things I built
 					</h2>
 				</div>
 
 				<!-- ROW ONE -->
-				<div class="row">
+				<div class="row lax" data-lax-preset="blurIn fadeIn">
 					<!-- CARD ONE -->
 					<div class="col-1-of-3">
 						<div class="card">
@@ -163,7 +165,7 @@
 				</div>
 
 				<!-- ROW TWO -->
-				<div class="row">
+				<div class="row lax" data-lax-preset="blurIn fadeIn">
 					<!-- CARD FOUR -->
 					<div class="col-1-of-3">
 						<div class="card">
@@ -433,5 +435,24 @@
 				</div>
 			</div>
 		</div>
+
+		<script src="node_modules/lax.js/lib/lax.min.js"></script>
+		<script>
+			window.onload = function() {
+				lax.setup(); // init
+
+				const updateLax = () => {
+					lax.update(window.scrollY);
+					window.requestAnimationFrame(updateLax);
+				};
+
+				window.requestAnimationFrame(updateLax);
+			};
+			lax.addPreset('myPreset', function() {
+				return {
+					'data-lax-opacity': '(-vh*0.2) 90, (-vh*0.4) 40'
+				};
+			});
+		</script>
 	</body>
 </html>
